@@ -1,7 +1,7 @@
 [Live Demo](https://vibe-forces.vercel.app)  
 [Live Pitch Deck (PDF)](./docs/VibeForces-Hackathon-Pitch.pdf)  
 [Live Video - YouTube](https://youtu.be/kNQ_HABToss)
-[Live Video - GitHub](h./docs/VibeForces-Pitch.mp4)
+[Live Video - GitHub](./docs/VibeForces-Pitch.mp4)
 
 # VibeForces
 
