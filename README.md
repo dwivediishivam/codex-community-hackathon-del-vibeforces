@@ -1,71 +1,49 @@
+[Live Demo](https://vibe-forces.vercel.app)  
+[Live Pitch Deck (PDF)](./docs/VibeForces-Hackathon-Pitch.pdf)  
+[Live Video](https://youtube.com)
+
 # VibeForces
 
-LeetCode for vibecoders: a full-stack training and assessment platform for prompt-first software work.
+LeetCode for Vibecoders. Training, Testing and Ranking Devs in 2026.
 
-## Showcase Mirror
+## Hackathon Pitch
 
-This public repository is a sanitized showcase mirror of the codebase.
-Live deployment wiring, secret-bearing config, and CI/CD automation are intentionally not included here.
+VibeForces is a prompt-native assessment platform for the next generation of software engineers: the developers who build with AI, debug with AI, and ship with AI. Traditional coding platforms measure raw implementation skill. VibeForces measures something different and increasingly more valuable: whether a developer can guide models precisely, efficiently, and reliably under real product constraints.
 
-## Stack
+This project turns that idea into a working product with live challenge evaluation across five modes:
+- Spec-to-prompt
+- Token golf
+- Bug fix
+- Architecture pick
+- UI reproduction
 
-- `frontend/`: Next.js App Router, Tailwind CSS v4, shadcn/base-ui, Monaco, Framer Motion
-- `backend/`: Express + TypeScript + OpenAI SDK + Puppeteer
-- `shared/`: challenge definitions, seed data, shared types
-- `supabase/`: SQL migrations and generated seed SQL
+Judges can explore three real surfaces in one product:
+- Learners practice and climb live leaderboards.
+- Recruiters assemble challenge packs and share live test links with candidates.
+- Admins run public contests and manage platform activity.
 
-## What Ships In This Repo
+## Why It Stands Out
 
-- 30 challenges across spec-to-prompt, token golf, bug fix, architecture pick, and UI reproduction
-- learner, recruiter, and admin surfaces
-- public recruiter test links and contest pages
-- Supabase auth/profile/test/contest/submission flows
-- generated voice-note assets, UI screenshots, and brand assets
-- seeded leaderboard, contest, and recruiter test data
+- It evaluates modern engineering behavior, not just textbook algorithm recall.
+- It combines structured scoring, model-backed judging, and product-grade UX in one platform.
+- It supports training, screening, and ranking instead of solving only one workflow.
+- It uses challenge types that reflect real AI-era work: extracting specs, fixing broken code, comparing architecture tradeoffs, and reproducing UI from screenshots.
 
-## Local Setup
+## What Was Built
 
-1. Copy `.env.example` to `.env` and fill in the Supabase/OpenAI values.
-2. Install dependencies:
+- Full-stack app with Next.js frontend and Express backend
+- 30 launch challenges across five categories
+- Live scoring and submission persistence
+- Supabase-backed auth, profiles, leaderboards, contests, and recruiter tests
+- OpenAI-powered judging and prompt execution flows
+- Asset pipeline for voice notes, screenshots, and brand materials
 
-```bash
-npm install
-npm --prefix frontend install
-npm --prefix backend install
-```
+## Judge Lens
 
-3. Generate local assets:
+If you are evaluating product quality, this shows a complete workflow from homepage to judged submission. If you are evaluating technical ambition, it combines multimodal challenge formats, server-side scoring, recruiter tooling, and deployment on a real cloud stack. If you are evaluating relevance, it is directly aimed at how developers are actually being evaluated in the AI-assisted era.
 
-```bash
-npm run assets:generate
-```
+## Repo Notes
 
-4. Apply database migrations and seed demo data:
+This public repository is a sanitized showcase mirror. It is meant for judging and review, not for owning the live deployment pipeline.
 
-```bash
-npm run db:migrate
-npm run db:seed
-```
-
-5. Start the app:
-
-```bash
-npm run dev
-```
-
-Frontend runs on `http://localhost:3000`. Backend runs on `http://localhost:3001`.
-
-## Useful Scripts
-
-- `npm run dev`
-- `npm run build`
-- `npm run typecheck`
-- `npm run assets:generate`
-- `npm run db:migrate`
-- `npm run db:seed`
-
-## Notes
-
-- The migration script first tries direct Postgres access and automatically falls back to the Supabase Management SQL API when direct DB networking is unavailable.
-- The frontend can render against mock data when public Supabase env vars are missing, which keeps builds stable in preview environments.
-- Seeded accounts use the password defined in `shared/seed-data.ts`.
+For local development and setup, see [SETUP.md](./SETUP.md).
